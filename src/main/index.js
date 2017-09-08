@@ -115,9 +115,9 @@ const createSimpleWebSocketMiddleware = () => {
             } else {
                 if (action.type == ActionTypes.CLOSE_WEBSOCKET) {
                     if (isConnectionAvailable(endpoint)) {
-                        getConnection(endpoint).websocket.close();
-                        return;
+                        getConnection(endpoint).websocket.close()
                     }
+                    return;
                 }
 
                 var okToNext = true;
