@@ -1,6 +1,6 @@
 {
     "name": "redux-simple-websocket",
-    "version": "3.0.11",
+    "version": "1.0.1",
     "description": "Simple websocket middleware for ReactJS",
     "main": "index.js",
     "scripts": {
@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/bachden/nhb-popup-manager-js.git"
+        "url": "git+https://github.com/bachden/redux-simple-websocket.git"
     },
     "keywords": [
         "websocket",
@@ -19,9 +19,9 @@
     "author": "Bach Hoang Nguyen",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/bachden/nhb-popup-manager-js/issues"
+        "url": "https://github.com/bachden/redux-simple-websocket/issues"
     },
-    "homepage": "https://github.com/bachden/nhb-popup-manager-js#readme",
+    "homepage": "https://github.com/bachden/redux-simple-websocket#readme",
     "esversion": 6,
     "babel": {
         "presets": [
@@ -31,14 +31,12 @@
         ]
     },
     "dependencies": {
-        "css-loader": "^0.28.7",
         "react": "^15.6.1",
-        "react-dom": "^15.6.1",
-        "react-redux": "^5.0.6",
         "redux": "^3.7.2",
-        "style-loader": "^0.18.2"
+        "react-redux": "^5.0.6"
     },
     "devDependencies": {
+        "react-dom": "^15.6.1",
         "babel-core": "^6.25.0",
         "babel-loader": "^7.1.0",
         "babel-plugin-transform-object-rest-spread": "^6.23.0",
