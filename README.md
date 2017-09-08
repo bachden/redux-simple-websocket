@@ -28,7 +28,7 @@ dispatch( closeWebSocketAction( endpoint ) )
 dispatch( sendDataToWebSocketAction( endpoint, message ) )
 ```
 
-if websocket did not connected, and you try to sending, the payload will be push to queue and wait for connection
+if websocket did not connected, and you try to sending, the payload will be pushed to queue and wait for connection
 
 # events
 all actions can be used by import
@@ -74,13 +74,6 @@ const connection = ( state = defaultState, action ) => {
             return {
                 ...state,
                 log: state.log.concat( ["[RECV] (" + action.endpoint + ") < " + JSON.stringify( action.payload )] )
-            }
-        case "CHANGE_SIGNALING_SERVER_ENDPOINT":
-            if ( action.endpoint != state.endpoint ) {
-                return {
-                    ...state,
-                    endpoint: action.endpoint
-                }
             }
     }
     return state

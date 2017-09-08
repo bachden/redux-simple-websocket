@@ -1,6 +1,6 @@
 {
     "name": "redux-simple-websocket",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Simple websocket middleware for ReactJS",
     "main": "index.js",
     "scripts": {
@@ -30,12 +30,11 @@
             "stage-2"
         ]
     },
-    "dependencies": {
+    "dependencies": {},
+    "devDependencies": {
         "react": "^15.6.1",
         "redux": "^3.7.2",
-        "react-redux": "^5.0.6"
-    },
-    "devDependencies": {
+        "react-redux": "^5.0.6",
         "react-dom": "^15.6.1",
         "babel-core": "^6.25.0",
         "babel-loader": "^7.1.0",
