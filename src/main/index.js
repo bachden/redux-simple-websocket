@@ -32,6 +32,7 @@ const createSimpleWebSocketMiddleware = () => {
     var connections = {}
 
     return store => {
+
         function setupSocket(endpoint) {
             var socket = new WebSocket(endpoint)
             socket.onopen = (e) => {
@@ -47,9 +48,12 @@ const createSimpleWebSocketMiddleware = () => {
                     })
                 }
             }
+
             socket.onerror = (err) => {
+                delete connections[endpoint]
                 store.dispatch(createErrorAction(endpoint, err))
             }
+
             socket.onmessage = (e) => {
                 var data = e.data;
                 try {
@@ -59,10 +63,12 @@ const createSimpleWebSocketMiddleware = () => {
                 }
                 store.dispatch(createMessageAction(endpoint, data))
             }
+
             socket.onclose = () => {
                 delete connections[endpoint]
                 store.dispatch(createDisonnectionAction(endpoint))
             }
+
             return socket
         }
 
