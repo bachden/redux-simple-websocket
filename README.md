@@ -28,7 +28,7 @@ dispatch( closeWebSocketAction( endpoint ) )
 dispatch( sendDataToWebSocketAction( endpoint, message ) )
 ```
 
-if websocket did not connected, and you try to sending, the payload will be pushed to queue and wait for connection
+if websocket weren't connected, and you're trying to send data, the payload will be pushed to queue and wait for connection
 
 # events
 all actions can be used by import
